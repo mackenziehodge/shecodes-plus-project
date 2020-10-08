@@ -1,0 +1,86 @@
+html {
+  min-height: 100%;
+}
+body {
+  background-image: linear-gradient(to top, #00cbff 0%, #537895 100%);
+  font-family: "Montserrat", sans-serif;
+}
+button {
+  border: 2px solid #00cbff;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+h3 {
+  background-color: white;
+  border: 2px solid #00cbff;
+  font-size: 14px;
+  display: block;
+  max-width: 120px;
+}
+
+.changeCity {
+  display: inline;
+  padding: 0px 10px 0px 0px;
+}
+.currentCity {
+  font-size: 20px;
+}
+.currentInformation {
+  background: white;
+  border: 4px solid #e69c40;
+  border-radius: 100%;
+  font-size: 24px;
+  left: 20px;
+  margin: 0px 40px 0px 0px;
+  opacity: 0.9;
+  padding: 20px 30px;
+  position: fixed;
+  text-align: center;
+  top: 20px;
+}
+.currentInformation h1 {
+  display: block;
+  font-size: 68px;
+  margin: 0 auto;
+}
+.currentInformation h2 {
+  color: #e69c40;
+  font-size: 28px;
+}
+.topTable {
+  margin: 0px 20px 0px 200px;
+}
+.col-8 {
+  background-color: white;
+  font-size: 36px;
+}
+.col-4 {
+  background-color: white;
+}
+.humSpeed {
+  display: block;
+  padding: 0px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.tempsRow {
+  font-size: 12px;
+}
+.todayWeather {
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+.row {
+  background-color: white;
+}
+.weekWeather {
+  display: block;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}

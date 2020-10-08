@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="currentInformation">
+        <h1>☀️</h1>
+        <h2><span id="current-temp"></span>°C</h2>
+        <h3 id="description"></h3>
+      </div>
+      <div class="humSpeed">
+        <p>Humidity:<span id="humidity"></span></p>
+        <p>Wind Speed:<span id="wind"></span></p>
+      </div>
+      <div class="topTable">
+        <div class="row mt-5">
+          <div class="col-8 border" id="current-city-displayed"></div>
+
+          <div class="col-4 border" id="current-time-date">
+            12:03pm Tue 1st Sept 2020
+          </div>
+        </div>
+
+        <form class="changeCity" id="change-city-form">
+          <input
+            type="text"
+            placeholder="                  ...change city"
+            id="change-city-input"
+            autocomplete="off"
+            autofocus="on"
+          /><button
+            type="button"
+            class="btn btn-success ml-2"
+            id="change-city-button"
+          >
+            Search
+          </button>
+          <button id="current-location-button">Current Location</button>
+        </form>
+      </div>
+      <button id="celcius-button">C°</button>
+      <button id="far-button">F°</button>
+      <h3>Todays Weather</h3>
+      <section class="todayWeather">
+        <div class="row show-grid">
+          <div class="col border-right border-left border-top">☀️</div>
+          <div class="col border-right border-left border-top">☀️</div>
+          <div class="col border-right border-left border-top">☀️</div>
+          <div class="col border-right border-left border-top">🌙</div>
+          <div class="col border-right border-left border-top">🌙</div>
+          <div class="col border-right border-left border-top">🌙</div>
+          <div class="col border-right border-left border-top">🌙</div>
+        </div>
+        <div class="row show-grid">
+          <div class="col border-right border-left">22°</div>
+          <div class="col border-right border-left">22°</div>
+          <div class="col border-right border-left">22°</div>
+          <div class="col border-right border-left">14°</div>
+          <div class="col border-right border-left">14°</div>
+          <div class="col border-right border-left">14°</div>
+          <div class="col border-right border-left">14°</div>
+        </div>
+        <div class="row show-grid">
+          <div class="col border-right border-left border-bottom">12:00</div>
+          <div class="col border-right border-left border-bottom">15:00</div>
+          <div class="col border-right border-left border-bottom">18:00</div>
+          <div class="col border-right border-left border-bottom">21:00</div>
+          <div class="col border-right border-left border-bottom">23:00</div>
+          <div class="col border-right border-left border-bottom">02:00</div>
+          <div class="col border-right border-left border-bottom">05:00</div>
+        </div>
+      </section>
+      <h3>7 Day Forecast</h3>
+      <section class="weekWeather">
+        <div class="row">
+          <div class="col border-right border-left border-top">☀️</div>
+          <div class="col border-right border-left border-top">⛅️</div>
+          <div class="col border-right border-left border-top">☀️</div>
+          <div class="col border-right border-left border-top">🌩</div>
+          <div class="col border-right border-left border-top">🌤</div>
+          <div class="col border-right border-left border-top">🌦</div>
+          <div class="col border-right border-left border-top">⛈</div>
+        </div>
+        <div class="tempsRow">
+          <div class="row">
+            <div class="col border-right border-left">22°/14°</div>
+            <div class="col border-right border-left">22°/14°</div>
+            <div class="col border-right border-left">22°/14°</div>
+            <div class="col border-right border-left">22°/14°</div>
+            <div class="col border-right border-left">22°/14°</div>
+            <div class="col border-right border-left">22°/14°</div>
+            <div class="col border-right border-left">22°/14°</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col border-right border-left border-bottom">Mon</div>
+          <div class="col border-right border-left border-bottom">Tue</div>
+          <div class="col border-right border-left border-bottom">Wed</div>
+          <div class="col border-right border-left border-bottom">Thur</div>
+          <div class="col border-right border-left border-bottom">Fri</div>
+          <div class="col border-right border-left border-bottom">Sat</div>
+          <div class="col border-right border-left border-bottom">Sun</div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="src/app.js"></script>
+</html>
